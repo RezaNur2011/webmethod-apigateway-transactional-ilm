@@ -1,0 +1,39 @@
+{
+  "index": {
+    "lifecycle": {
+      "name": "apigateway-ilm",
+      "rollover_alias": "gateway_default_analytics_transactionalevents"
+    },
+    "highlight": {
+      "max_analyzed_offset": "50000000"
+    },
+    "mapping": {
+      "total_fields": {
+        "limit": "50000"
+      }
+    },
+    "refresh_interval": "10s",
+    "number_of_shards": "1",
+    "final_pipeline": "parse-respayload",
+    "default_pipeline": "gateway_analytics_xRequestId",
+    "analysis": {
+      "filter": {
+        "truncate_max": {
+          "length": "32766",
+          "type": "truncate"
+        }
+      },
+      "analyzer": {
+        "not_analyzed_ignorecase": {
+          "filter": [
+            "lowercase",
+            "truncate_max"
+          ],
+          "type": "custom",
+          "tokenizer": "keyword"
+        }
+      }
+    },
+    "number_of_replicas": "1"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "dynamic": false,
+  "dynamic_templates": [],
+  "properties": {
+    "nativeHttpMethod": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "request": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "apiName": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "sourceGatewayNode": {
+      "type": "keyword"
+    },
+    "origin": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "eventSource": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "sourceGatewayDetails": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "ignore_above": 256,
+          "type": "keyword"
+        }
+      }
+    },
+    "planName": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "httpMethod": {
+      "type": "keyword"
+    },
+    "respayload_responseDesc": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "cachedResponse": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "responseCode": {
+      "type": "keyword"
+    },
+    "respayload_responseCode": {
+      "type": "keyword"
+    },
+    "callbackRequest": {
+      "type": "keyword"
+    },
+    "apiVersion": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "messageType": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "nativeRequestHeaders": {
+      "type": "object"
+    },
+    "nativeResponseHeaders": {
+      "type": "object"
+    },
+    "errorOrigin": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "totalDataSize": {
+      "type": "long"
+    },
+    "planId": {
+      "type": "keyword"
+    },
+    "packageName": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "providerTime": {
+      "type": "long"
+    },
+    "apiId": {
+      "type": "keyword"
+    },
+    "applicationName": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "applicationIp": {
+      "type": "keyword"
+    },
+    "totalTime": {
+      "type": "long"
+    },
+    "packageId": {
+      "type": "keyword"
+    },
+    "nativeResPayload": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "ignore_above": 256,
+          "type": "keyword"
+        }
+      }
+    },
+    "operationName": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "respayload_code": {
+      "type": "integer"
+    },
+    "userAgent": {
+      "type": "keyword"
+    },
+    "eventType": {
+      "type": "keyword"
+    },
+    "sessionId": {
+      "type": "keyword"
+    },
+    "creationDate": {
+      "type": "date"
+    },
+    "nativeReqPayload": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "ignore_above": 256,
+          "type": "keyword"
+        }
+      }
+    },
+    "sourceGateway": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "response": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "externalCalls": {
+      "type": "nested",
+      "properties": {
+        "callDuration": {
+          "type": "long"
+        },
+        "externalURL": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          }
+        },
+        "callEndTime": {
+          "type": "long"
+        },
+        "callStartTime": {
+          "type": "long"
+        },
+        "externalCallType": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          }
+        },
+        "responseCode": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    },
+    "correlationID": {
+      "type": "keyword"
+    },
+    "applicationId": {
+      "type": "keyword"
+    },
+    "gatewayTime": {
+      "type": "long"
+    },
+    "nativeURL": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    },
+    "status": {
+      "fielddata": true,
+      "analyzer": "not_analyzed_ignorecase",
+      "type": "text"
+    }
+  }
+}
