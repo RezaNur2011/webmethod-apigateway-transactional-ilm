@@ -38,14 +38,14 @@ Full file: [`policies/apigateway-ilm-policy.json`](policies/apigateway-ilm-polic
 | **Cold** | *not enabled* | — |
 | **Delete** | index is **10 days** old | Delete (no snapshot wait — no snapshot lifecycle policy exists on this cluster yet) |
 
-![Hot phase configuration](screenshots/02-ilm-hot-phase.png)
-![Delete phase configuration](screenshots/03-ilm-delete-phase.png)
+![Hot phase configuration](<img width="872" height="404" alt="02-ilm-hot-phase" src="https://github.com/user-attachments/assets/ec341d67-630b-44bb-9a16-345159428112" />)
+![Delete phase configuration](<img width="944" height="399" alt="03-ilm-delete-phase" src="https://github.com/user-attachments/assets/04d2a3ea-5a00-4c18-a946-26dd0e741d6b" />)
 
 **Why no warm/cold tier:** with only a 10-day total retention, the cost/complexity of relocating data to a separate tier before deleting it isn't worth it here — everything just lives on hot storage for its full 10-day life and then gets deleted directly. Cold/warm tiering earns its keep when retention stretches into weeks/months and query patterns clearly shift from "recent, hot" to "occasional, historical" — that's not this workload.
 
 ## 4. What the live indices actually look like
 
-![Index Management view](screenshots/01-index-management-overview.png)
+![Index Management view](<img width="942" height="411" alt="01-index-management-overview" src="https://github.com/user-attachments/assets/5a9c9b6d-0bb7-40e5-bad1-de3a900ecb53" />)
 
 Real index sizes from Index Management, one per day under the `gateway_default_analytics_transactionalevents-*` rollover alias:
 
